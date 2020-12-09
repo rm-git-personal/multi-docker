@@ -12,7 +12,7 @@ script:
 after_success:
   - docker build -t mechanikhil/multi-client ./client
   - docker build -t mechanikhil/multi-nginx ./nginx
-  - docker build -t mechanikhil/multi-servier ./server
+  - docker build -t mechanikhil/multi-server ./server
   - docker build -t mechanikhil/multi-worker ./worker
 # Login to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
